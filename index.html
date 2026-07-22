@@ -354,6 +354,7 @@ footer strong{color:var(--aqua)}
 
 <section id="valuechain" style="margin-bottom:48px">
   <div class="section-title">Fisheries Value Chain</div>
+  <div class="section-desc">An interactive map of how fish move from seed to market. Click any node to learn what it involves, why it matters, and what challenges and solutions exist at each stage.</div>
   <div class="vc-diagram" style="border-radius:14px;overflow:hidden;border:2px solid var(--border);box-shadow:var(--shadow-lg);margin:20px 0;background:#fff">
     <div style="font-weight:700;font-size:.85rem;color:var(--deep);padding:10px 0 0;text-align:center;text-transform:uppercase;letter-spacing:.06em">FISHERIES VALUE CHAIN</div>
     <div class="vc-diagram-inner">
@@ -422,11 +423,9 @@ footer strong{color:var(--aqua)}
           <div class="phase-body">
             <div class="cat-label">Drying</div>
             <div><span class="node link" onclick="vcGoto('processing')">Fish Dryer</span></div>
-            <div class="cat-label">Smoking</div>
             <div><span class="node link" onclick="vcShow('smoking')">Smoking</span></div>
             <div class="cat-label">Chilling</div>
             <div><span class="node link" onclick="vcShow('cold-room')">Cold Room</span></div>
-            <div class="cat-label">Freezing</div>
             <div><span class="node link" onclick="vcShow('freezing')">Freezing</span></div>
             <div class="cat-label">Fresh Storage</div>
             <div><span class="node link" onclick="vcShow('fresh-storage')">Fresh Fish Storage</span></div>
@@ -440,19 +439,21 @@ footer strong{color:var(--aqua)}
         <div class="phase">
           <h2>RETAIL &amp;<br>MARKETING</h2>
           <div class="phase-body">
+            <div class="cat-label">Live Fish Marketing</div>
             <div class="phase-row">
               <div class="sub-col"><span class="node link" onclick="vcGoto('processing')">Live Fish</span></div>
               <div class="sub-col"><span class="node link" onclick="vcGoto('processing')">Aerated Transport</span></div>
             </div>
-            <div class="cat-label">Live Fish Marketing</div>
-            <div><span class="node link" onclick="vcGoto('processing')">Fresh Fish</span></div>
-            <div class="cat-label">Fresh Fish Marketing</div>
-            <div><span class="node link" onclick="vcGoto('processing')">Dry Fish</span></div>
             <div class="cat-label">Dry Fish Marketing</div>
-            <div><span class="node link" onclick="vcGoto('processing')">Frozen Fish</span></div>
+            <div class="phase-row">
+              <div class="sub-col"><span class="node link" onclick="vcGoto('processing')">Dry Fish</span></div>
+              <div class="sub-col"><span class="node link" onclick="vcShow('smoking')">Smoked Fish</span></div>
+            </div>
             <div class="cat-label">Frozen Fish Marketing</div>
-            <div><span class="node link" onclick="vcGoto('processing')">Reefer Van</span></div>
-            <div class="cat-label">Cold-chain Transport</div>
+            <div class="phase-row">
+              <div class="sub-col"><span class="node link" onclick="vcGoto('processing')">Frozen Fish</span></div>
+              <div class="sub-col"><span class="node link" onclick="vcGoto('processing')">Reefer Van</span></div>
+            </div>
           </div>
         </div>
 
@@ -464,7 +465,7 @@ footer strong{color:var(--aqua)}
 
 <section id="species" style="margin-bottom:48px">
   <div class="section-title">Species Photo Guide</div>
-  <div class="section-desc">Real photographs from the handbook. Filter by category to find the right species for your climate, water type, and market.</div>
+  <div class="section-desc">Before choosing what to farm, understand what's available. This chapter introduces the key species — Indian Major Carps, exotic species, high-value indigenous fish, and small indigenous species — with real photographs and guidance on which suits your climate, water type, and market.</div>
 
   <div class="species-tabs">
     <button class="species-tab active" onclick="filterSpecies('all',this)">All Species</button>
@@ -539,15 +540,19 @@ footer strong{color:var(--aqua)}
 </section>
 
 
+<section id="pre-hatchery-intro" style="margin-bottom:28px">
+  <div class="section-desc" style="max-width:720px;font-size:.95rem;line-height:1.8;color:var(--text)">The following sections walk through each stage of the fisheries value chain — from hatchery operations and species selection to grow-out farming, processing, and marketing. Each chapter covers what the stage involves, the challenges farmers face, and the climate-smart solutions being deployed to overcome them. Click on any section in the sidebar or scroll through to explore.</div>
+</section>
+
 <section id="hatchery" style="margin-bottom:28px">
   <div class="section-title">Hatchery</div>
-  <div class="section-desc">The critical first link in the value chain. Hatcheries produce the larvae and juveniles that enable aquaculture across India.</div>
+  <div class="section-desc">The foundation of aquaculture. This chapter covers what hatcheries do, the challenges they face in rural India, and the climate-smart infrastructure being deployed to make seed production reliable and year-round.</div>
 
   <div class="chapter-section">
     <div class="chapter-header" onclick="toggleSection('hatchery-body',this)">
       <div class="chapter-header-icon"><span class="icon icon-md"><svg viewBox="0 0 24 24"><path d="M12 21c4 0 6.5-3.5 6.5-8C18.5 7 15 3 12 3S5.5 7 5.5 13C5.5 17.5 8 21 12 21Z"/></svg></span></div>
       <div class="chapter-header-text">
-        <div class="chapter-title-big">Spawning, Incubation &amp; Nursery Systems</div>
+        <div class="chapter-title-big">Spawning, Incubation &amp; Nursery Systems — What, Why, How</div>
       </div>
       <button class="chapter-toggle"><span class="icon icon-sm"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></button>
     </div>
@@ -618,6 +623,8 @@ footer strong{color:var(--aqua)}
 <hr class="divider">
 
 <section id="biofloc" style="margin-bottom:28px">
+  <div class="section-title">Biofloc Technology</div>
+  <div class="section-desc">A climate-smart grow-out solution. Biofloc eliminates water exchange, reduces feed costs by 30–40%, and turns waste into food — making it ideal for water-scarce and flood-prone regions.</div>
   <div class="chapter-section">
     <div class="chapter-header" onclick="toggleSection('biofloc-body',this)">
       <div class="chapter-header-icon"><span class="icon icon-md"><svg viewBox="0 0 24 24"><path d="M7 19H4.8a2 2 0 0 1-1.7-3l3-5.2"/><path d="m9 11 1 -3 -1.5 -2.6"/><path d="M15.5 4.6 17 7l-3.4 6"/><path d="m11.5 19 2.5 -1.5 2.5 1.5"/><path d="M19.4 14.4 21 16.6a2 2 0 0 1 -1.7 3H15"/><path d="m3.5 7.5 2.5 1.5"/></svg></span></div>
@@ -669,11 +676,13 @@ footer strong{color:var(--aqua)}
 </section>
 
 <section id="ras" style="margin-bottom:28px">
+  <div class="section-title">Recirculating Aquaculture Systems (RAS)</div>
+  <div class="section-desc">The most advanced climate-resilient solution. RAS recycles 95–99% of water indoors, enabling year-round production independent of weather, grid power, or land availability.</div>
   <div class="chapter-section">
     <div class="chapter-header" onclick="toggleSection('ras-body',this)">
       <div class="chapter-header-icon"><span class="icon icon-md"><svg viewBox="0 0 24 24"><path d="M17 2.1 21 6l-4 3.9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="m7 21.9-4-3.9 4-3.9"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span></div>
       <div class="chapter-header-text">
-        <div class="chapter-title-big">Recirculating Aquaculture Systems (RAS)</div>
+        <div class="chapter-title-big">Recirculating Aquaculture Systems (RAS) — The Most Intensive System</div>
       </div>
       <button class="chapter-toggle"><span class="icon icon-sm"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></button>
     </div>
@@ -712,7 +721,7 @@ footer strong{color:var(--aqua)}
 
 <section id="waterquality" style="margin-bottom:48px">
   <div class="section-title">Water Quality Parameters</div>
-  <div class="section-desc">Optimal ranges for freshwater fish farming. Green = optimal, amber = caution, red = danger zone requiring immediate action.</div>
+  <div class="section-desc">The invisible factor that determines everything. Learn the optimal ranges for temperature, oxygen, pH, ammonia, and more — and what to do when parameters go outside safe limits.</div>
   <div class="wq-grid">
     <div class="wq-card optimal"><div class="wq-param">Temperature</div><div class="wq-value">25-32&deg;C</div><div class="wq-range">Below 20&deg;C &rarr; slow growth</div><span class="wq-status">Optimal</span></div>
     <div class="wq-card optimal"><div class="wq-param">Dissolved Oxygen</div><div class="wq-value">&gt; 5 mg/L</div><div class="wq-range">Below 3 &rarr; stress; below 1 &rarr; mortality</div><span class="wq-status">Optimal</span></div>
@@ -729,7 +738,7 @@ footer strong{color:var(--aqua)}
 
 <section id="diseases" style="margin-bottom:48px">
   <div class="section-title">Disease Checker</div>
-  <div class="section-desc">Select the symptoms you observe in your fish. The tool will suggest possible diagnoses and treatments based on the handbook's disease tables.</div>
+  <div class="section-desc">Identify what's wrong with your fish. Select the symptoms you observe and get possible diagnoses with treatments — based on the handbook's disease tables. Always consult a fish pathologist for severe outbreaks.</div>
   <div class="panel">
     <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px">
       <label style="font-weight:700;font-size:.86rem;color:var(--deep)">Select all symptoms you are observing:</label>
@@ -750,11 +759,13 @@ footer strong{color:var(--aqua)}
 </section>
 
 <section id="processing" style="margin-bottom:28px">
+  <div class="section-title">Fish Processing, Solar Drying &amp; Marketing</div>
+  <div class="section-desc">Post-harvest value creation. This chapter covers how fish are preserved, processed, and marketed — with solar-powered solutions that eliminate diesel dependency and extend shelf life from hours to months.</div>
   <div class="chapter-section">
     <div class="chapter-header" onclick="toggleSection('proc-body',this)">
       <div class="chapter-header-icon"><span class="icon icon-md"><svg viewBox="0 0 24 24"><path d="M12 2v20M5 6.5l14 11M19 6.5l-14 11M2 12h20M5 17.5l14-11M19 17.5l-14-11"/></svg></span></div>
       <div class="chapter-header-text">
-        <div class="chapter-title-big">Fish Processing, Solar Drying &amp; Marketing</div>
+        <div class="chapter-title-big">Fish Processing, Solar Drying &amp; Marketing — From Water to Market</div>
       </div>
       <button class="chapter-toggle"><span class="icon icon-sm"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></button>
     </div>
@@ -795,7 +806,7 @@ footer strong{color:var(--aqua)}
 
 <section id="climateresilient" style="margin-bottom:48px">
   <div class="section-title">Climate-Resilient Technologies: Real Deployments</div>
-  <div class="section-desc">Actual photographs from field deployments in Assam, Jharkhand, and Odisha — with verified ROI data. Climate-resilient solutions eliminate the number one barrier to small-farmer productivity: unreliable grid power.</div>
+  <div class="section-desc">Proof that it works. Real photographs and verified ROI data from field deployments in Assam, Jharkhand, and Odisha — showing how solar-powered systems eliminate grid dependency and transform small-farmer economics.</div>
 
   <div class="impact-grid" style="margin-bottom:32px">
     <div class="impact-card"><div class="impact-label">Nursery Pond (Assam)</div><div class="impact-num">3x</div><div class="impact-desc">Survival rate — spawn to fingerling — with spiral diffuser aeration</div></div>
@@ -861,7 +872,7 @@ footer strong{color:var(--aqua)}
 
 <section id="records" style="margin-bottom:48px">
   <div class="section-title">Farm Record Keeper</div>
-  <div class="section-desc">Log harvests and track farm finances. Records save in your browser — export to CSV any time.</div>
+  <div class="section-desc">Track your farm's performance. Log harvests, revenue, and expenses — all saved locally in your browser. Export to CSV anytime for accounting or government scheme applications.</div>
   <div class="panel">
     <div class="record-form">
       <div class="form-group"><label>Pond / Tank No.</label><input type="text" id="r-pond" placeholder="e.g. P1"></div>
@@ -894,7 +905,7 @@ footer strong{color:var(--aqua)}
 
 <section id="calculator" style="margin-bottom:48px">
   <div class="section-title">Farm Profitability Calculator</div>
-  <div class="section-desc">Estimate expected yield, revenue, costs, and energy savings based on handbook pilot data.</div>
+  <div class="section-desc">Plan before you invest. Estimate expected yield, revenue, costs, and energy savings based on real pilot data from Assam, Jharkhand, and Odisha — across pond, cage, biofloc, and RAS systems.</div>
   <div class="panel">
     <div class="calc-form">
       <div class="form-group"><label>Pond Area (ha)</label><input type="number" id="c-area" value="0.5" min="0.1" step="0.1"></div>
